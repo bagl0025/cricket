@@ -1,0 +1,26 @@
+.button {
+    border-radius: 2px;
+    color: white;
+    margin: 5px 0 0 20px;
+    width: 5%;
+}
+
+.number {
+    background-color: cornflowerblue;
+}
+
+.subLeft, .subRight {
+    background-color: red;
+}
+
+.addLeft, .addRight {
+    background-color: green;
+}
+
+.subScoreLeft, .subScoreRight {
+    background-color: red;
+}
+
+.addScoreLeft, .addScoreRight {
+    background-color: green;
+}
