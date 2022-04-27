@@ -6,35 +6,30 @@ var scoreRight = Array(21).fill(0);
 $("button").click(function(event){
     //get id number
     var idClicked = event.target.id;
-    console.log(idClicked);
     var btnClass = event.target.className;
 
     // id button class
     if (btnClass.indexOf("subLeft") >= 0) {
-        console.log("sub left true");
         addEm(0,0,idClicked);
     }
     else if (btnClass.indexOf("addLeft") >= 0) {
-        console.log("add left true");
         addEm(0,1,idClicked)
     }
     else if (btnClass.indexOf("scoreLeft") >= 0) {
         console.log("score left true");
 
     }
-    else if (btnClass.indexOf("number") >= 0) {
-        console.log("number true");
-    }
+    // else if (btnClass.indexOf("number") >= 0) {
+    //     return false;
+    // }
     else if (btnClass.indexOf("scoreRight") >= 0) {
         console.log("Score right true");
         
     }
     else if (btnClass.indexOf("addRight") >= 0) {
-        console.log("AR true");
         addEm(1,1,idClicked)
     }
     else if (btnClass.indexOf("subRight") >= 0) {
-        console.log("SR true");
         addEm(1,0,idClicked)
     }
 });
@@ -82,17 +77,18 @@ var addEm = function(player, operation, idClicked) {
     }
 };
 
+// NEED TO add flex properties
 
-//create repo
-//styling
+//div vs p spacing
+//col headings / header
+
+//add player names
+
 //bull icon
 //get score working
-//bootstrap 5 cols
-
 // you can click beyond +3 and below 0
-//add player names
 //need to handle case to go from 1 back to 0
 //need headers
-// add colums
 //add dart boart image
-//number doesn't need to be a button
+
+//number doesn't need to be a button, or coulb be circle
