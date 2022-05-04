@@ -5,21 +5,26 @@
 
 body {
   background-image: url("../images/blackboard2.jpeg");
-
+  font-family: 'Fredericka the Great', cursive;
 }
 
+/* buttons used for scoring/adding dart */
 .button {
-  border-radius: 30px;
+  border-radius: 20px;
+  border: solid white 2px;
   color: white;
   background-color: green;
-  /* margin: 5px 0 0 20px; */
-  /* width: fit-content; */
   text-align: center;
+  padding: 20px;
+  margin-left: 10px;
 }
 
 #lScore, #rScore {
   background-color: white;
-  border: 2px solid black;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 5px;
+  font-size: xx-large;
 }
 
 #addSub, #dartScore {
@@ -28,14 +33,15 @@ body {
   border-radius: 30px;
 }
 
-#addSub:hover, #dartScore:hover {
+/* #addSub:active {
   background-color: red;
-}
+} */
 
 .dart {
   border: white solid 2px;
   border-radius: 1px;
   color: white;
+
 }
 
 .number {
@@ -43,4 +49,5 @@ body {
   border-radius: 1px;
   font-size: x-large;
   color: white;
+  text-align: center;
 }
