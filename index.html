@@ -10,114 +10,74 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-1 ltic">
-                <div>Title</div>
-                <div id="pl20">pl20</div>
-                <div id="pl19">pl19</div>
-                <div id="pl18">pl18</div>
-                <div id="pl17">pl17</div>
-                <div id="pl16">pl16</div>
-                <div id="pl15">pl15</div>
-                <div id="pl0">plB</div>
-            </div>
+      <!-- Top row -->
+      <div class="row g-0 col-12"> 
+        <div class="col-3" id="lScore">points</div>
+        <div class="col-2" id="addSub">add/sub</div>
+        <div class="col-2"><img src="./assets/images/dartboard.svg" width="100%"></div>
+        <div class="col-2" id="dartScore">Dart/score</div>
+        <div class="col-3" id="rScore">points</div>
+      </div>
 
-            <div class="col-md-2 lplay">
-                <p>left +/-</p>
-                <button class="button addLeft" id="20">20+</button>
-                <button class="button subLeft" id="20">20-</button>
-                <button class="button addLeft" id="19">19+</button>
-                <button class="button subLeft" id="19">19-</button>
-                <button class="button addLeft" id="18">18+</button>
-                <button class="button subLeft" id="18">18-</button>
-                <button class="button addLeft" id="17">17+</button>
-                <button class="button subLeft" id="17">17-</button>
-                <button class="button addLeft" id="16">16+</button>
-                <button class="button subLeft" id="16">16-</button>
-                <button class="button addLeft" id="15">15+</button>
-                <button class="button subLeft" id="15">15-</button>
-                <button class="button addLeft" id="0">B+</button>
-                <button class="button subLeft" id="0">B-</button>
-            </div>
-        
+      <!-- other rows -->
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="l20">20</button></div>
+        <div class="col-2 dart" id="ld20">Darts</div>
+        <div class="col-2 number">20</div>
+        <div class="col-2 dart" id="rd20">Darts</div>
+        <div class="col-3"><button class="button" id="r20">20</button></div>
+      </div>
 
-            <div class="col-md-2 lscore">
-                <p>l score</p>
-                <button class="button addScoreLeft" id="20">20+</button>
-                <button class="button subScoreLeft" id="20">20-</button>
-                <button class="button addScoreLeft" id="19">19+</button>
-                <button class="button subScoreLeft" id="19">19-</button>
-                <button class="button addScoreLeft" id="18">18+</button>
-                <button class="button subScoreLeft" id="18">18-</button>
-                <button class="button addScoreLeft" id="17">17+</button>
-                <button class="button subScoreLeft" id="17">17-</button>
-                <button class="button addScoreLeft" id="16">16+</button>
-                <button class="button subScoreLeft" id="16">16-</button>
-                <button class="button addScoreLeft" id="15">15+</button>
-                <button class="button subScoreLeft" id="15">15-</button>
-                <button class="button addScoreLeft" id="0">B+</button>
-                <button class="button subScoreLeft" id="0">B-</button>
-            </div>
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="l19">19</button></div>
+        <div class="col-2 dart" id="ld19">Darts</div>
+        <div class="col-2 number">19</div>
+        <div class="col-2 dart" id="rd19">Darts</div>
+        <div class="col-3"><button class="button" id="r19">19</button></div>
+      </div>
 
-            <div class="col-md-2 num">
-                <p>number</p>
-                <button class="button number" id="20">20</button>
-                <button class="button number" id="19">19</button>
-                <button class="button number" id="19">18</button>
-                <button class="button number" id="19">17</button>
-                <button class="button number" id="19">16</button>
-                <button class="button number" id="19">15</button>
-                <button class="button number" id="19">B</button>
-            </div>
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="l18">18</button></div>
+        <div class="col-2 dart" id="ld18">Darts</div>
+        <div class="col-2 number">18</div>
+        <div class="col-2 dart" id="rd18">Darts</div>
+        <div class="col-3"><button class="button" id="r18">18</button></div>
+      </div>
 
-            <div class="col-md-2 rscore`">
-                <p>r score</p>
-                <button class="button addScoreRight" id="20">+</button>
-                <button class="button subScoreRight" id="20">-</button>
-                <button class="button addScoreRight" id="19">+</button>
-                <button class="button subScoreRight" id="19">-</button>
-                <button class="button addScoreRight" id="18">+</button>
-                <button class="button subScoreRight" id="18">-</button>
-                <button class="button addScoreRight" id="17">+</button>
-                <button class="button subScoreRight" id="17">-</button>
-                <button class="button addScoreRight" id="16">+</button>
-                <button class="button subScoreRight" id="16">-</button>
-                <button class="button addScoreRight" id="15">+</button>
-                <button class="button subScoreRight" id="15">-</button>
-                <button class="button addScoreRight" id="B">+</button>
-                <button class="button subScoreRight" id="B">-</button>
-            </div>
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="l17">17</button></div>
+        <div class="col-2 dart" id="ld17">Darts</div>
+        <div class="col-2 number">17</div>
+        <div class="col-2 dart" id="rd17">Darts</div>
+        <div class="col-3"><button class="button" id="r17">17</button></div>
+      </div>
 
-            <div class="col-md-2 rplay">
-                <p>r darts</p>
-                <button class="button addRight" id="20">20+</button>
-                <button class="button subRight" id="20">20-</button>
-                <button class="button addRight" id="19">19+</button>
-                <button class="button subRight" id="19">19-</button>
-                <button class="button addRight" id="18">18+</button>
-                <button class="button subRight" id="18">18-</button>
-                <button class="button addRight" id="17">17+</button>
-                <button class="button subRight" id="17">17-</button>
-                <button class="button addRight" id="16">16+</button>
-                <button class="button subRight" id="16">16-</button>
-                <button class="button addRight" id="15">15+</button>
-                <button class="button subRight" id="15">15-</button>
-                <button class="button addRight" id="B">B+</button>
-                <button class="button subRight" id="B">B-</button>
-            </div>
-            <div class="col-md-1 rtic"> 
-                <p>Title</p>
-                <p id="pr20">pr20</p>
-                <p id="pr19">pr19</p>
-                <p id="pr18">pr18</p>
-                <p id="pr17">pr17</p>
-                <p id="pr16">pr16</p>
-                <p id="pr15">pr15</p>
-                <p id="pr0">prB</p>
-            </div>
-        </div> <!--close row-->
-    </div> <!--close container-->
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="l16">16</button></div>
+        <div class="col-2 dart" id="ld16">Darts</div>
+        <div class="col-2 number">16</div>
+        <div class="col-2 dart" id="rd16">Darts</div>
+        <div class="col-3"><button class="button" id="r16">16</button></div>
+      </div>
+
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="l15">15</button></div>
+        <div class="col-2 dart" id="ld15">Darts</div>
+        <div class="col-2 number">15</div>
+        <div class="col-2 dart" id="rd15">Darts</div>
+        <div class="col-3"><button class="button" id="r15">15</button></div>
+      </div>
+
+      <div class="row g-0 mt-2 col-12">
+        <div class="col-3"><button class="button" id="lB">B</button></div>
+        <div class="col-2 dart" id="ldB">Darts</div>
+        <div class="col-2 number">B</div>
+        <div class="col-2 dart" id="rdB">Darts</div>
+        <div class="col-3"><button class="button" id="rB">B</button></div>
+      </div>
+    </div> <!--containerend-->
+            
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>

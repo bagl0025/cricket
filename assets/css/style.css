@@ -1,48 +1,46 @@
-.button {
-    border-radius: 2px;
-    color: white;
-    margin: 5px 0 0 20px;
-    width: 35%;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.ltic {
-    background-color: aqua;
+body {
+  background-image: url("../images/blackboard2.jpeg");
+
 }
-.lplay {
-    background-color: bisque;
+
+.button {
+  border-radius: 30px;
+  color: white;
+  background-color: green;
+  /* margin: 5px 0 0 20px; */
+  /* width: fit-content; */
+  text-align: center;
 }
-.lscore {
-    background-color: blueviolet;
+
+#lScore, #rScore {
+  background-color: white;
+  border: 2px solid black;
 }
-.num {
-    background-color: burlywood;
+
+#addSub, #dartScore {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 30px;
 }
-.rscore {
-    background-color: coral;
+
+#addSub:hover, #dartScore:hover {
+  background-color: red;
 }
-.rplay {
-    background-color: darkcyan;
-}
-.rtic {
-    background-color: deeppink;
+
+.dart {
+  border: white solid 2px;
+  border-radius: 1px;
+  color: white;
 }
 
 .number {
-    background-color: cornflowerblue;
-}
-
-.subLeft, .subRight {
-    background-color: red;
-}
-
-.addLeft, .addRight {
-    background-color: green;
-}
-
-.subScoreLeft, .subScoreRight {
-    background-color: red;
-}
-
-.addScoreLeft, .addScoreRight {
-    background-color: green;
+  border: white solid 2px;
+  border-radius: 1px;
+  font-size: x-large;
+  color: white;
 }
