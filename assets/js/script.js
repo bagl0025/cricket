@@ -1,65 +1,74 @@
-var countLeft = Array(21).fill(0);
-var countRight = Array(21).fill(0);
-var scoreLeft = Array(21).fill(0);
-var scoreRight = Array(21).fill(0);
+var dartLeft = Array(21).fill(0);
+var dartRight = Array(21).fill(0);
+var scoreLeft = 0;
+var scoreRight = 0;
+var dartNum;
 // defaults
-var player = 0; // 0 is left 1 is right
-var dartScore = 0; // 0 is dart 1 is score
 var addSub = 1; // 0 is sub 1 is add
 
 $("button").click(function(event){
     //get id 
     var idClicked = event.target.id;
     console.log(idClicked);
-    if (idClicked === "addSub") {
-        if (addSub === 1) {
-            addSub = 0;
-            $("#addSub").css("background-color", "red")
-            console.log("going from add to sub")
-        }
-        else {
-            addSub = 1;
-            $("#addSub").css("background-color", "green")
-            console.log("going from sub to add")
-        }
-    }
     
-    if (idClicked === "dartScore") {
-        if (dartScore === 0) {
-            dartScore = 1;
-            $("#dartScore").css("background-color", "red")
-            console.log("going from dart to score")
-        }
-        else {
-            dartScore = 0;
-            $("#dartScore").css("background-color", "green")
-            console.log("going from score to dart")
-        }
+    if (idClicked === "add") {
+        addSub = 1;
+        $("#add").css("background-color", "green");
+        $("#sub").css("background-color", "darkblue");
     }
-});    
-    //if id has l or R set player
-    // if we are adding... set var
-    // if we are scoring or darts set operation
+    else if (idClicked === "sub") {
+        addSub = 0;
+        $("#sub").css("background-color", "green");
+        $("#add").css("background-color", "darkblue");
+    } 
+    else {
+        //separate letter and number from idClicked
+        player = idClicked.replace(/[0-9]/g,'');
+        dartNum = idClicked.replace(/\D/g,'');
+        console.log(player,dartNum,addSub);
+        addEm(player,dartNum,addSub,idClicked);
+    }   
+});
 
-var addEm = function(player, operation, idClicked) {  
-    console.log(player,operation);  
-    if (operation === 1) {
-        if (player === 0) {
-            countLeft[idClicked]++;
+var addEm = function(player, dartNum, addSub, idClicked) {  
+    // need to convert dartnum to INT since it was obtained from string
+    dartNum = parseInt(dartNum);
+    if (addSub === 1) {
+        //player 1 (left)
+        if (player === 'l') {
+            // if 3 darts have been counted time to score
+            if (dartLeft[dartNum] < 3) {
+                dartLeft[dartNum]++;
+                $('#'+player+'d'+dartNum).text(dartLeft[dartNum]);
+            }
+            // if all 3 darts haven't been hit keep couting darts
+            else {
+                scoreLeft = scoreLeft + dartNum;
+                console.log(scoreLeft)
+                $('#lScore').text(scoreLeft);
+            }
         }
-        else if (player === 1) {
-            countRight[idClicked]++;
+        //player 2 (right)
+        else if (player === 'r') {
+            // if 3 darts have been counted time to score
+            if (dartRight[dartNum] < 3) {
+                dartRight[dartNum]++;
+                $('#'+player+'d'+dartNum).text(dartRight[dartNum]);
+            }
+            // if all 3 darts haven't been hit keep couting darts
+            else {
+                scoreRight = scoreRight + dartNum;
+                $('#rScore').text(scoreRight);
+            }
         }
     }
-    // else if (countRight[idClicked] === 2) {
-    //     $("#pr" + idClicked).text("X");
-    // }
-   
-    // else {
-    //     return false;
-    // }
 };
 
-// you can click beyond +3 and below 0
-//need to handle case to go from 1 back to 0
-//provide a way to view score and dart history
+//need to add subtract functionality - how?
+//points vs darts
+//??? if scoring reduce score
+//if counting darts reduce dart count
+
+// need to replace numbers with icons
+
+//finish styling
