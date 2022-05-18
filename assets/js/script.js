@@ -1,5 +1,5 @@
-var dartLeft = Array(21).fill(0);
-var dartRight = Array(21).fill(0);
+var dartLeft = Array(26).fill(0);
+var dartRight = Array(26).fill(0);
 var scoreLeft = 0;
 var scoreRight = 0;
 var dartNum;
