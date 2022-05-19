@@ -3,13 +3,14 @@ var dartRight = Array(26).fill(0);
 var scoreLeft = 0;
 var scoreRight = 0;
 var dartNum;
+let p1total = 0;
+let p2total = 0;
 // defaults
 var addSub = 1; // 0 is sub 1 is add
 
 $("button").click(function(event){
     //get id 
     var idClicked = event.target.id;
-    console.log(idClicked);
     
     if (idClicked === "add") {
         addSub = 1;
@@ -81,7 +82,6 @@ var addEm = function(player, dartNum, addSub, idClicked) {
     // if addsub == 0 (subtract) applies to darts only
     // can't sub after scoring begins
     else {
-        console.log('entered sub==0 else')
         if (player === 'l') {
             if (dartLeft[dartNum] > 3) {
                 alert("Can't subtract darts after scoring begins!");
@@ -119,14 +119,12 @@ var addEm = function(player, dartNum, addSub, idClicked) {
             }
         }
     }
-    $("#refresh").click(function(){
-        location.reload();
-    });
 };
+
+$("#refresh").click(function(){
+    location.reload();
+});
 
 //readme update
 // Add a you win message
-// End of start turn button to add up total darts thrown
-// Cumulate total darts landed
-// Calculate percentage accuracy
 // Replace alert with modal
