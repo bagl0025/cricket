@@ -119,7 +119,14 @@ var addEm = function(player, dartNum, addSub, idClicked) {
             }
         }
     }
+    $("#refresh").click(function(){
+        location.reload();
+    });
 };
 
-//Add new game button at bottom??? button should just reload page
 //readme update
+// Add a you win message
+// End of start turn button to add up total darts thrown
+// Cumulate total darts landed
+// Calculate percentage accuracy
+// Replace alert with modal

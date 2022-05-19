@@ -15,7 +15,7 @@ body {
   color: white;
   background-color: green;
   text-align: center;
-  padding: 20px;
+  padding: 13px;
   font-size: x-large;
 }
 
@@ -24,7 +24,7 @@ body {
   border: 3px solid black;
   text-align: center;
   border-radius: 5px;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 #add {
@@ -63,8 +63,17 @@ body {
   justify-content: center;
 }
 
+.botrow {
+  align-items: center;
+  justify-content: center;
+}
+
 .addSub, .col-3 {
   display: inline-flex!important;
   align-items: center;
   justify-content: space-around;
+}
+
+#p1 {
+  background-color: maroon;
 }

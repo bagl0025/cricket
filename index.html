@@ -18,7 +18,6 @@
       <!-- Top row -->
       <div class="row g-0 col-12 toprow"> 
         <div class="col-3" id="lScore">points</div>
-        <!-- <div class="col-2"><button class="button" id="sub"><img src="./assets/images/minus.svg" width="20"></button></div> -->
         <div class="col-2 addSub"><button class="button fa-solid fa-minus" id="sub"></button></div>
         <div class="col-2"><img src="./assets/images/dartboard.svg" width="100%"></div>
         <div class="col-2 addSub"><button class="button fa-solid fa-plus" id="add"></button></div>
@@ -26,7 +25,7 @@
       </div>
 
       <!-- other rows -->
-      <div class="row g-0 mt-2 col-12">
+      <div class="row g-0 mt-2 col-12 dartRows">
         <div class="col-3"><button class="button" id="l20">20</button></div>
         <div class="col-2 dart d-inline-flex" id="ld20">Darts</div>
         <div class="col-2 number">20</div>
@@ -81,6 +80,14 @@
         <div class="col-2 dart" id="rd25">Darts</div>
         <div class="col-3"><button class="button" id="r25">B</button></div>
       </div>
+
+      <!-- bottom row -->
+      <div class="row g-0 col-12 botrow"> 
+        <div class="col-3 turn"><button class="button fa-solid fa-user" id="p1"></button></div>
+        <div class="col-3 turn"><button class="button fa-solid fa-user" id="p2"></button></div>
+        <div class="col-6 turn"><button class="button fa-solid fa-refresh" id="refresh"></button></div>
+      </div>
+
     </div> <!--containerend-->
             
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
