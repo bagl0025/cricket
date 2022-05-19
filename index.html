@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    <link rel = "shortcut icon" href = "./assets/images/dartboard.svg" type = "image/svg"/>
+    <!-- <link rel = "shortcut icon" href = "./assets/images/dartboard.svg" type = "image/svg"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cricket Scoreboard</title>
 </head>
@@ -17,9 +18,10 @@
       <!-- Top row -->
       <div class="row g-0 col-12"> 
         <div class="col-3" id="lScore">points</div>
-        <div class="col-2"><button class="button" id="sub"><img src="./assets/images/minus.svg" width="20"></button></div>
+        <!-- <div class="col-2"><button class="button" id="sub"><img src="./assets/images/minus.svg" width="20"></button></div> -->
+        <div class="col-2"><button class="button fa-solid fa-minus" id="sub"></button></div>
         <div class="col-2"><img src="./assets/images/dartboard.svg" width="100%"></div>
-        <div class="col-2"><button class="button" id="add"><img src="./assets/images/plus.svg" width="20"></button></div>
+        <div class="col-2"><button class="button fa-solid fa-plus" id="add"></button></div>
         <div class="col-3" id="rScore">points</div>
       </div>
 

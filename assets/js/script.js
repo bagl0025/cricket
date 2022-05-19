@@ -38,8 +38,18 @@ var addEm = function(player, dartNum, addSub, idClicked) {
         if (player === 'l') {
             // if all 3 darts haven't been hit keep couting darts
             if (dartLeft[dartNum] < 3) {
+                if (dartLeft[dartNum] === 0) { 
+                    $('#'+player+'d'+dartNum).addClass("fa-solid fa-slash").text("");
+                } 
+                else if (dartLeft[dartNum] === 1) { 
+                    console.log(dartLeft[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-slash").addClass("fa-solid fa-xmark");
+                }
+                else if (dartLeft[dartNum] === 2) { 
+                    console.log(dartLeft[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-xmark").addClass("fa-solid fa-circle-radiation");
+                }
                 dartLeft[dartNum]++;
-                $('#'+player+'d'+dartNum).text(dartLeft[dartNum]);
             }
             // if 3 darts have been counted time to score
             else {
@@ -52,8 +62,18 @@ var addEm = function(player, dartNum, addSub, idClicked) {
         else if (player === 'r') {
             // if all 3 darts haven't been hit keep couting darts
             if (dartRight[dartNum] < 3) {
+                if (dartRight[dartNum] === 0) { 
+                    $('#'+player+'d'+dartNum).addClass("fa-solid fa-slash").text("");
+                } 
+                else if (dartRight[dartNum] === 1) { 
+                    console.log(dartRight[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-slash").addClass("fa-solid fa-xmark");
+                }
+                else if (dartRight[dartNum] === 2) { 
+                    console.log(dartRight[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-xmark").addClass("fa-solid fa-circle-radiation");
+                }
                 dartRight[dartNum]++;
-                $('#'+player+'d'+dartNum).text(dartRight[dartNum]);
             }
             // if 3 darts have been counted time to score
             else {
@@ -66,38 +86,73 @@ var addEm = function(player, dartNum, addSub, idClicked) {
     // if addsub == 0 (subtract) applies to darts only
     // can't sub after scoring begins
     else {
+        console.log('entered sub==0 else')
         if (player === 'l') {
+            console.log(dartLeft[dartNum])
+
             if (dartLeft[dartNum] > 3) {
                 alert("Can't subtract darts after scoring begins!");
                 return false;
             }
-            else {
-                if (dartLeft[dartNum] === 0) {
-                    return false;
-                }
-                else {
+            
+                else if (dartLeft[dartNum] === 1) {
+                    console.log(dartLeft[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-slash").text("Darts");
                     dartLeft[dartNum]--;
-                    $('#'+player+'d'+dartNum).text(dartLeft[dartNum]);
+
+                    // return false;
                 }
-            }
+                else if (dartLeft[dartNum] === 3) { 
+                    console.log(dartLeft[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-circle-radiation").addClass("fa-solid fa-xmark");
+                    dartLeft[dartNum]--;
+                    console.log('bcb 2')
+
+                }
+                else if (dartLeft[dartNum] === 2) { 
+                    console.log(dartLeft[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-xmark").addClass("fa-solid fa-slash");
+                    dartLeft[dartNum]--;
+                    console.log('bcb 1')
+
+                }
+            
         }
+        
         else {
             if (dartRight[dartNum] > 3) {
                 alert("Can't subtract darts after scoring begins!");
                 return false;
             }
-            else {  
-                if (dartRight[dartNum] === 0) {
-                    return false;
-                } 
-                else {
+            
+                else if (dartRight[dartNum] === 1) {
+                    console.log(dartRight[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-slash").text("Darts");
                     dartRight[dartNum]--;
-                    $('#'+player+'d'+dartNum).text(dartRight[dartNum]);
+
+                    // return false;
                 }
-            }
+                else if (dartRight[dartNum] === 3) { 
+                    console.log(dartRight[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-circle-radiation").addClass("fa-solid fa-xmark");
+                    dartRight[dartNum]--;
+                    console.log('bcb 2')
+
+                }
+                else if (dartRight[dartNum] === 2) { 
+                    console.log(dartRight[dartNum])
+                    $('#'+player+'d'+dartNum).removeClass("fa-solid fa-xmark").addClass("fa-solid fa-slash");
+                    dartRight[dartNum]--;
+                    console.log('bcb 1')
+
+                }
         }
     }
 };
 
 // need to replace numbers with icons
 //finish styling
+//Add new game button at bottom??? button should just reload page
+//readme update
+
+//fix sub routine - not replacing icons, seems to not be enterinf loop at all.
