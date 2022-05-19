@@ -124,7 +124,6 @@ var addEm = function(player, dartNum, addSub, idClicked) {
 $("#refresh").click(function(){
     location.reload();
 });
-
 //readme update
-// Add a you win message
 // Replace alert with modal
+// how to get it to google play
