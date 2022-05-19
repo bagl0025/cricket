@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  margin: 0;
+  margin: 0;  
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   background-color: green;
   text-align: center;
   padding: 20px;
-  margin-left: 10px;
+  font-size: x-large;
 }
 
 #lScore, #rScore {
@@ -29,7 +29,7 @@ body {
 
 #add {
   background-color: green;
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 30px;
 }
 
@@ -43,7 +43,9 @@ body {
   border: white solid 2px;
   border-radius: 1px;
   color: white;
-
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .number {
@@ -51,5 +53,18 @@ body {
   border-radius: 1px;
   font-size: x-large;
   color: white;
-  text-align: center;
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.toprow {
+  align-items: center;
+  justify-content: center;
+}
+
+.addSub, .col-3 {
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
 }
