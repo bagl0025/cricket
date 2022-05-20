@@ -3,8 +3,6 @@ var dartRight = Array(26).fill(0);
 var scoreLeft = 0;
 var scoreRight = 0;
 var dartNum;
-let p1total = 0;
-let p2total = 0;
 // defaults
 var addSub = 1; // 0 is sub 1 is add
 
@@ -14,13 +12,14 @@ $("button").click(function(event){
     
     if (idClicked === "add") {
         addSub = 1;
+        // #1E407C dark #001E44
         $("#add").css("background-color", "green");
-        $("#sub").css("background-color", "darkblue");
+        $("#sub").css("background-color", "#001E44");
     }
     else if (idClicked === "sub") {
         addSub = 0;
         $("#sub").css("background-color", "green");
-        $("#add").css("background-color", "darkblue");
+        $("#add").css("background-color", "#001E44");
     } 
     else {
         //separate letter and number from idClicked
@@ -125,5 +124,4 @@ $("#refresh").click(function(){
     location.reload();
 });
 //readme update
-// Replace alert with modal
 // how to get it to google play
