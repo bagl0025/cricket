@@ -10,8 +10,6 @@
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  Cricket scorer ............ 
-
   # Table of Contents
   * [Usage](#usage)
   * [License](#license)
@@ -21,9 +19,9 @@
   * [Deployed App](#deployedapp)
     
   ## Usage
-  .............
-  
-  <img src="./assets/landing.png" alt="express note taker home page screenshot" width="600"/>
+  This app scores darts for cricket according to the standard rules.
+
+  <img src="./assets/images/screenshot.png" alt="cricket app screenshot" width="600"/>
     
   ## License
   This software is under the [MIT](./LICENSE) license.
@@ -38,3 +36,4 @@
   https://github.com/bagl0025/cricket
   
   ## DeployedApp  
+  https://bagl0025.github.io/cricket/
