@@ -123,5 +123,5 @@ var addEm = function(player, dartNum, addSub, idClicked) {
 $("#refresh").click(function(){
     location.reload();
 });
-//readme update
+//readme update ***
 // how to get it to google play
