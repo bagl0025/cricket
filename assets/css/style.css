@@ -27,14 +27,14 @@ body {
   font-size: x-large;
 }
 
-#add {
-  background-color: green;
+#help {
+  background-color: #001E44;
   border: 2px solid white;
   border-radius: 30px;
 }
 
-#sub {
-  background-color: #001E44;
+#addsub {
+  background-color: green;
   border: 2px solid white;
   border-radius: 30px;
 }
@@ -64,6 +64,12 @@ body {
 }
 
 .addSub, .col-3 {
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.help, .col-3 {
   display: inline-flex!important;
   align-items: center;
   justify-content: space-around;
