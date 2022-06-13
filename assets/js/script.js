@@ -6,58 +6,58 @@ var dartNum;
 // defaults
 var addSub = 1; // 0 is sub 1 is add
 
-$("button").click(function (event) {
+$('button').click(function (event) {
   //get id
   var idClicked = event.target.id;
 
-  if (idClicked === "help") {
-    const helpMsg = "Help is coming soon...";
+  if (idClicked === 'help') {
+    const helpMsg = 'Help\n secondline\n3rd line';
     swal({
-      title: "Help",
+      title: 'Help',
       text: helpMsg,
-      button: "Got It!",
+      button: 'Close',
     });
     return;
   }
-  if (idClicked === "addsub") {
+  if (idClicked === 'addsub') {
     if (addSub === 1) {
       addSub = 0;
-      $("#addsub").css("background-color", "red");
-      $("#addsub").removeClass("fa-solid fa-plus");
-      $("#addsub").addClass("fa-solid fa-minus");
+      $('#addsub').css('background-color', 'red');
+      $('#addsub').removeClass('fa-solid fa-plus');
+      $('#addsub').addClass('fa-solid fa-minus');
     } else {
       addSub = 1;
-      $("#addsub").css("background-color", "green");
-      $("#addsub").addClass("fa-solid fa-plus");
+      $('#addsub').css('background-color', 'green');
+      $('#addsub').addClass('fa-solid fa-plus');
     }
   } else {
     //separate letter and number from idClicked
-    player = idClicked.replace(/[0-9]/g, "");
-    dartNum = idClicked.replace(/\D/g, "");
-    addEm(player, dartNum, addSub, idClicked);
+    player = idClicked.replace(/[0-9]/g, '');
+    dartNum = idClicked.replace(/\D/g, '');
+    addEm(player, dartNum, addSub);
   }
 });
 
-var addEm = function (player, dartNum, addSub, idClicked) {
+var addEm = function (player, dartNum, addSub) {
   // need to convert dartnum to INT since it was obtained from string
   dartNum = parseInt(dartNum);
   if (addSub === 1) {
     //player 1 (left)
-    if (player === "l") {
+    if (player === 'l') {
       // if all 3 darts haven't been hit keep couting darts
       if (dartLeft[dartNum] < 3) {
         if (dartLeft[dartNum] === 0) {
-          $("#" + player + "d" + dartNum)
-            .addClass("fa-solid fa-slash fa-3x")
-            .text("");
+          $('#' + player + 'd' + dartNum)
+            .addClass('fa-solid fa-slash fa-3x')
+            .text('');
         } else if (dartLeft[dartNum] === 1) {
-          $("#" + player + "d" + dartNum)
-            .removeClass("fa-solid fa-slash")
-            .addClass("fa-solid fa-xmark fa-3x");
+          $('#' + player + 'd' + dartNum)
+            .removeClass('fa-solid fa-slash')
+            .addClass('fa-solid fa-xmark fa-3x');
         } else if (dartLeft[dartNum] === 2) {
-          $("#" + player + "d" + dartNum)
-            .removeClass("fa-solid fa-xmark")
-            .addClass("fa-solid fa-circle-radiation fa-3x");
+          $('#' + player + 'd' + dartNum)
+            .removeClass('fa-solid fa-xmark')
+            .addClass('fa-solid fa-circle-radiation fa-3x');
         }
         dartLeft[dartNum]++;
       }
@@ -65,25 +65,25 @@ var addEm = function (player, dartNum, addSub, idClicked) {
       else {
         scoreLeft = scoreLeft + dartNum;
         dartLeft[dartNum]++;
-        $("#lScore").text(scoreLeft);
+        $('#lScore').text(scoreLeft);
       }
     }
     //player 2 (right)
-    else if (player === "r") {
+    else if (player === 'r') {
       // if all 3 darts haven't been hit keep couting darts
       if (dartRight[dartNum] < 3) {
         if (dartRight[dartNum] === 0) {
-          $("#" + player + "d" + dartNum)
-            .addClass("fa-solid fa-slash fa-3x")
-            .text("");
+          $('#' + player + 'd' + dartNum)
+            .addClass('fa-solid fa-slash fa-3x')
+            .text('');
         } else if (dartRight[dartNum] === 1) {
-          $("#" + player + "d" + dartNum)
-            .removeClass("fa-solid fa-slash")
-            .addClass("fa-solid fa-xmark fa-3x");
+          $('#' + player + 'd' + dartNum)
+            .removeClass('fa-solid fa-slash')
+            .addClass('fa-solid fa-xmark fa-3x');
         } else if (dartRight[dartNum] === 2) {
-          $("#" + player + "d" + dartNum)
-            .removeClass("fa-solid fa-xmark")
-            .addClass("fa-solid fa-circle-radiation fa-3x");
+          $('#' + player + 'd' + dartNum)
+            .removeClass('fa-solid fa-xmark')
+            .addClass('fa-solid fa-circle-radiation fa-3x');
         }
         dartRight[dartNum]++;
       }
@@ -91,68 +91,54 @@ var addEm = function (player, dartNum, addSub, idClicked) {
       else {
         scoreRight = scoreRight + dartNum;
         dartRight[dartNum]++;
-        $("#rScore").text(scoreRight);
+        $('#rScore').text(scoreRight);
       }
     }
-  }
-  // if addsub == 0 (subtract) applies to darts only
-  // can't sub after scoring begins
-  else {
-    if (player === "l") {
-      if (dartLeft[dartNum] > 3) {
-        // alert("Can't subtract darts after scoring begins!");
-        swal(
-          "Warning",
-          "Can't subtract darts after scoring begins!",
-          "warning"
-        );
-        return false;
-      } else if (dartLeft[dartNum] === 1) {
-        $("#" + player + "d" + dartNum)
-          .removeClass("fa-solid fa-slash fa-3x")
-          .text("Darts");
-        dartLeft[dartNum]--;
-      } else if (dartLeft[dartNum] === 3) {
-        $("#" + player + "d" + dartNum)
-          .removeClass("fa-solid fa-circle-radiation")
-          .addClass("fa-solid fa-xmark");
-        dartLeft[dartNum]--;
-      } else if (dartLeft[dartNum] === 2) {
-        $("#" + player + "d" + dartNum)
-          .removeClass("fa-solid fa-xmark")
-          .addClass("fa-solid fa-slash");
-        dartLeft[dartNum]--;
-      }
-    } else {
-      if (dartRight[dartNum] > 3) {
-        // alert("Can't subtract darts after scoring begins!");
-        swal(
-          "Warning",
-          "Can't subtract darts after scoring begins!",
-          "warning"
-        );
-        return false;
-      } else if (dartRight[dartNum] === 1) {
-        $("#" + player + "d" + dartNum)
-          .removeClass("fa-solid fa-slash fa-3x")
-          .text("Darts");
-        dartRight[dartNum]--;
-      } else if (dartRight[dartNum] === 3) {
-        $("#" + player + "d" + dartNum)
-          .removeClass("fa-solid fa-circle-radiation")
-          .addClass("fa-solid fa-xmark");
-        dartRight[dartNum]--;
-      } else if (dartRight[dartNum] === 2) {
-        $("#" + player + "d" + dartNum)
-          .removeClass("fa-solid fa-xmark")
-          .addClass("fa-solid fa-slash");
-        dartRight[dartNum]--;
-      }
+    // subtract section - allows you to deduct points and darts
+  } else if (addSub === 0) {
+    if (dartLeft[dartNum] === 1) {
+      $('#' + player + 'd' + dartNum)
+        .removeClass('fa-solid fa-slash fa-3x')
+        .text('Darts');
+      dartLeft[dartNum]--;
+    } else if (dartLeft[dartNum] === 3) {
+      $('#' + player + 'd' + dartNum)
+        .removeClass('fa-solid fa-circle-radiation')
+        .addClass('fa-solid fa-xmark');
+      dartLeft[dartNum]--;
+    } else if (dartLeft[dartNum] === 2) {
+      $('#' + player + 'd' + dartNum)
+        .removeClass('fa-solid fa-xmark')
+        .addClass('fa-solid fa-slash');
+      dartLeft[dartNum]--;
+    } else if (dartLeft[dartNum] > 3) {
+      scoreLeft = scoreLeft - dartNum;
+      dartLeft[dartNum]--;
+      $('#lScore').text(scoreLeft);
+    }
+    if (dartRight[dartNum] === 1) {
+      $('#' + player + 'd' + dartNum)
+        .removeClass('fa-solid fa-slash fa-3x')
+        .text('Darts');
+      dartRight[dartNum]--;
+    } else if (dartRight[dartNum] === 3) {
+      $('#' + player + 'd' + dartNum)
+        .removeClass('fa-solid fa-circle-radiation')
+        .addClass('fa-solid fa-xmark');
+      dartRight[dartNum]--;
+    } else if (dartRight[dartNum] === 2) {
+      $('#' + player + 'd' + dartNum)
+        .removeClass('fa-solid fa-xmark')
+        .addClass('fa-solid fa-slash');
+      dartRight[dartNum]--;
+    } else if (dartRight[dartNum] > 3) {
+      scoreRight = scoreRight - dartNum;
+      dartRight[dartNum]--;
+      $('#rScore').text(scoreRight);
     }
   }
-};
+}; //end addem
 
-$("#refresh").click(function () {
+$('#refresh').click(function () {
   location.reload();
 });
-// how to get it to google play
