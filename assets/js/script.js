@@ -13,7 +13,7 @@ $('button').click(function (event) {
   if (idClicked === 'help') {
     const helpMsg =
       'Use the + button to toggle between add / subtract.\n' +
-      'It apllies to darts and points.\n\n' +
+      'It applies to darts and points.\n\n' +
       'The green numbers add darts or points.\n\n' +
       'The yellow refresh button starts a new game.\n\n' +
       'The blue circle with a question mark loads this help screen.\n';
