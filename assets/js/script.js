@@ -11,7 +11,12 @@ $('button').click(function (event) {
   var idClicked = event.target.id;
 
   if (idClicked === 'help') {
-    const helpMsg = 'Help\n secondline\n3rd line';
+    const helpMsg =
+      'Use the + button to toggle between adding' +
+      'and subtracting dart throws and points\n\n' +
+      'The green numbers add darts or points\n\n' +
+      'The yellow refresh button starts a new game\n\n' +
+      'The blue circle with a question mark loads this help screen\n';
     swal({
       title: 'Help',
       text: helpMsg,
