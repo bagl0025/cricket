@@ -96,3 +96,8 @@ body {
   padding: 10px;
   margin-top: 10px;
 }
+
+.swal-text {
+  font-size: 1.6rem !important;
+  font-family: Georgia, serif !important;
+}
