@@ -93,20 +93,8 @@ body {
   margin-top: 10px;
 }
 
-/* #p1 {
-  background-color: #500000;
-  padding: 10px;
-  margin-left: 45px;
-} */
-
 #train {
   background-color: #500000;
-  /* padding: 10px;
-  border-radius: 10px;
-  border: solid white 2px;
-  color: white;
-  text-align: center;
-  font-size: x-large; */
 }
 
 .swal-text {
