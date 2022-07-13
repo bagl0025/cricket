@@ -17,6 +17,9 @@ $('button').click(function (event) {
     case 'refresh':
       location.reload();
       break;
+    case 'p1':
+      train();
+      break;
     case 'addsub':
       if (addSub === 1) {
         addSub = 0;
@@ -41,6 +44,18 @@ $('button').click(function (event) {
   }
 }); //on 'button' click function
 
+var train = function () {
+  var num = Math.floor(Math.random() * (21 - 14) + 14);
+  var mult = Math.floor(Math.random() * (4 - 1) + 1);
+  if (mult === 1) {
+    mult = 'S';
+  } else if (mult === 2) {
+    mult = 'D';
+  } else {
+    mult = 'T';
+  }
+  $('#train').text(mult + ' - ' + num);
+};
 var addEm = function (player, dartNum) {
   // need to convert dartnum to INT since it was obtained from string
   dartNum = parseInt(dartNum);
@@ -152,6 +167,7 @@ var help = function () {
     'Use the + button to toggle between add / subtract.\n' +
     'It applies to darts and points.\n\n' +
     'The green numbers add darts or points.\n\n' +
+    'Push the thumbs up to get a target dart for training.\n\n' +
     'The yellow refresh button starts a new game.\n\n' +
     'The blue circle with a question mark loads this help screen.\n';
   swal({
