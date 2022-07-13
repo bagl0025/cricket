@@ -54,7 +54,7 @@ var train = function () {
   } else if (mult === 3) {
     mult = 'T';
   }
-  if (num === 22) {
+  if (num === 21) {
     if (mult === 'T') {
       mult = 'D';
     }
