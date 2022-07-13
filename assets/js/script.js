@@ -51,8 +51,14 @@ var train = function () {
     mult = 'S';
   } else if (mult === 2) {
     mult = 'D';
-  } else {
+  } else if (mult === 3) {
     mult = 'T';
+  }
+  if (num === 14) {
+    if (mult === 'T') {
+      mult = 'D';
+    }
+    num = 'B';
   }
   $('#train').removeClass('fa-solid fa-thumbs-up');
   $('#train').text(mult + ' - ' + num);
