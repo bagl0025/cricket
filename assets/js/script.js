@@ -45,7 +45,7 @@ $('button').click(function (event) {
 }); //on 'button' click function
 
 var train = function () {
-  var num = Math.floor(Math.random() * (21 - 14) + 14);
+  var num = Math.floor(Math.random() * (22 - 1) + 1);
   var mult = Math.floor(Math.random() * (4 - 1) + 1);
   if (mult === 1) {
     mult = 'S';
@@ -54,7 +54,7 @@ var train = function () {
   } else if (mult === 3) {
     mult = 'T';
   }
-  if (num === 14) {
+  if (num === 22) {
     if (mult === 'T') {
       mult = 'D';
     }
