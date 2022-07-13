@@ -17,7 +17,7 @@ $('button').click(function (event) {
     case 'refresh':
       location.reload();
       break;
-    case 'p1':
+    case 'train':
       train();
       break;
     case 'addsub':
@@ -54,6 +54,7 @@ var train = function () {
   } else {
     mult = 'T';
   }
+  $('#train').removeClass('fa-solid fa-thumbs-up');
   $('#train').text(mult + ' - ' + num);
 };
 var addEm = function (player, dartNum) {
