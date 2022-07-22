@@ -1,0 +1,18 @@
+{
+  "android": {
+    "debug": {
+      "keystore": "cricket.keystore",
+      "storePassword": "!neptune",
+      "alias": "cricket",
+      "password": "!neptune",
+      "keystoreType": ""
+    },
+    "release": {
+      "keystore": "cricket.keystore",
+      "storePassword": "!neptune",
+      "alias": "cricket",
+      "password": "!neptune",
+      "keystoreType": ""
+    }
+  }
+}

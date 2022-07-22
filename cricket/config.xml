@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.bagley.cricket" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>cricket</name>
+    <description>App for Scoring and practicing the dart game cricket</description>
+    <author email="bagley@umn.edu" href="https://github.com/bagl0025">
+        Brian Bagley
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon src="../assets/images/dartboard.png" />
+</widget>

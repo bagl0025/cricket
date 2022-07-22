@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;  
+}
+
+body {
+  /* background-image: url("../images/blackboard2.jpeg"); */
+  font-family: 'Fredericka the Great', cursive;
+  background-color: black;
+}
+
+/* buttons used for scoring/adding dart */
+.button {
+  border-radius: 20px;
+  border: solid white 2px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  padding: 13px;
+  font-size: x-large;
+}
+
+#lScore, #rScore {
+  background-color: white;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 51px;
+  font-size: x-large;
+}
+
+#help {
+  background-color: #001E44;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+#addsub {
+  background-color: green;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+.dart {
+  border: white solid 2px;
+  border-radius: 1px;
+  color: white;
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.number {
+  border: white solid 2px;
+  border-radius: 1px;
+  font-size: x-large;
+  color: white;
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.toprow {
+  align-items: center;
+  justify-content: center;
+}
+
+.addSub, .col-3 {
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.help, .col-3 {
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.turn {
+    display: grid;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#refresh {
+  background-color: #ffcc33;
+}
+
+.bottomrow {
+  display: inline-flex!important;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+#train {
+  background-color: #500000;
+}
+
+.swal-text {
+  font-size: 1.6rem !important;
+  font-family: Georgia, serif !important;
+}
