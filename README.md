@@ -15,6 +15,7 @@
 - [Contribute](#contribute)
 - [Questions](#questions)
 - [Github Profile](#github)
+- [Get it on Google Play](#googleplay)
 - [Deployed App](#deployedapp)
 
 ## Usage
@@ -36,6 +37,10 @@ Contact author at bagley@umn.edu for questions or to report issues.
 ## GitHub
 
 https://github.com/bagl0025/cricket
+
+## Google Play
+
+<a href='https://play.google.com/store/apps/details?id=com.bagley.cricket&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width='200'/></a>
 
 ## DeployedApp
 
